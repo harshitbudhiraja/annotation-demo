@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tabs button {
+  padding: 10px;
+  height: 50px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background-color: #ccc;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+}
+
+.text-box {
+  flex: 2;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.text-box p {
+  margin-bottom: 20px;
+}
+
+.highlight {
+  background-color: lightpurple;
+  padding: 5px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.remove-btn {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+
+.confirm-btn {
+  padding: 10px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.side-panel {
+  flex: 1;
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.span-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.span-details p {
+  margin: 0;
+}
+
+
+.comparison-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  gap: 20px; 
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 3%;
+  margin: 10px;
+  width: 40%;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  background-color: #f9f9f9;
+}
+
+.highlight-initial {
+  background-color: rgba(255, 0, 0, 0.3);
+  padding: 2px 5px;
+}
+
+.highlight-updated {
+  background-color: rgba(0, 255, 0, 0.3);
+  padding: 2px 5px;
+}
+
+h2 {
+  cursor: pointer;
+}
+
+h2:hover {
+  color: #007BFF; 
+}
+
+.beautiful-button {
+  background-color: #007BFF; 
+  border: 12px; 
+  color: white; 
+  padding: 10px 22px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 4px; 
+  transition: background-color 0.3s ease; 
+  margin-top: 1rem;
+}
+
+.annotate-btn{
+  width:100px;
+  color:black;
+  height: 50px;
+  border-radius: 5px;
+  margin:10px;
+  cursor: not-allowed;
+}
+
+.annotate-btn:disabled {
+  background-color: #ccc;  /* Gray */
+  color: #666;
+  cursor: not-allowed;
+}
+
+
+.beautiful-button:hover {
+  background-color: #ec7f1a; 
+}
+
+.prompt-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.prompt-selector:hover {
+  cursor: pointer; 
+}
+
+
+.tile {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+.tile-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.tile h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.tile-text {
+  position: absolute;
+  /* bottom: -100%; */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  transition: bottom 0.3s ease;
+  margin-bottom: 10px;
+}
+/* 
+.tile:hover .tile-text {
+  bottom: 0;
+} */
+
+
+.prompt-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #f9f9f9;
 }

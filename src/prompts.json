@@ -1,0 +1,104 @@
+{
+  "original_prompt": "In the quaint village of Suryapur, the bustling haat is alive with the chatter of local farmers selling fresh produce. Elderly villagers discuss the latest bhajan while children play with traditional kites during the Makar Sankranti festival. The aroma of freshly made rotis and pickles fills the air as people gather around to share tales of folk heroes. The local panchayat deliberates on community issues, reflecting the essence of rural life that contrasts sharply with the urban hustle of cities like Mumbai or Delhi, where towering skyscrapers and the fast-paced life of corporate offices dominate daily routines.",
+  "original_prompt_response": {
+      "spans": [
+          {
+              "CSI": "haat",
+              "familiarity": "Somewhat familiar",
+              "reason": "Haat, a rural market, might be somewhat known but not fully understood by urban Indian teenagers."
+          },
+          {
+              "CSI": "bhajan",
+              "familiarity": "Familiar",
+              "reason": "Bhajan, a type of Indian devotional song, is commonly known across India, including urban areas."
+          },
+          {
+              "CSI": "Makar Sankranti",
+              "familiarity": "Familiar",
+              "reason": "Makar Sankranti, a popular Indian festival, is widely celebrated and known even in urban areas."
+          },
+          {
+              "CSI": "panchayat",
+              "familiarity": "Somewhat familiar",
+              "reason": "Panchayat, a local village council, might be known but not fully understood in urban contexts."
+          }
+      ],
+      "reformulation": "In the charming village of Suryapur, the lively local market buzzes with the sounds of local farmers selling fresh fruits and vegetables. Elderly villagers talk about the latest devotional songs while children fly traditional kites during the Makar Sankranti festival. The smell of freshly made flatbreads and pickles fills the air as people gather to share stories about legendary local figures. The village council discusses community matters, showing a slice of rural life that is very different from the busy city life in places like Mumbai or Delhi, where tall buildings and busy corporate jobs are the norm."
+  },
+  "update_info_prompt": "On further understanding, I find out the following observations.\n\nI am familiar with spans of text like haat, panchayat.\nI am not familiar with spans of text like towering skyscrapers, fast-paced life, corporate offices.\nBased on this information, let me know my region, from where I belong to. Region can either be rural or urban. Format your response as a valid Python dictionary: {\"region\" : <region>}",
+  "update_info_prompt_response": {
+      "region" : "rural"
+  },
+  "updated_prompt_new_text": "\n# AI Rules\n    - Output response JSON format compatible with Python.\n    - JSON keys and values in double-quotes\n    - Do not output any extraneous text \nYou are a cultural mediator who understands all cultures across the world. As a mediator, your job is to identify and translate culturally exotic concepts from texts from an unknown source culture to my culture. Your job is also to adapt with my background during the interaction. I am from a teenager, an occasional reader, proficient in English who grew up in the rural India, which defines my culture. I came across a piece of text. Given my cultural background and reading experience, perform the following tasks: \nTask 1: Identify all culture-specific items (CSIs) from the review text that I might find hard to understand due to my cultural background. CSIs are textual spans denoting concepts and items uncommon and not prevalent in my culture, making them difficult to understand.\nTask 2: For each CSI, identify its familiarity from one of the following four levels: 1. Familiar: Most people from my culture know and relate to the concept as intended. 2. Somewhat familiar: Only some people from my culture know and relate to the concept as intended. 3. Unfamiliar: Most people from my culture do not know or relate to the concept.\nTask 3: Within 50 words, detail your reason for highlighting the span as CSI in Task 1 by correlating it with my background. \nTask 4: Reformulate the entire text to make it more understandable to me. Keep the length similar to the original review text. \nFormat your response as a valid Python dictionary formatted as: {\"spans\": [List of Python dictionaries where each dictionary item is formatted as: {\"CSI\": <task 1: copy the CSI span from text>, \"familiarity\": <task 2: familiarity level name>, \"reason\": <task 3: reason within 50 words>}], \"reformulation\": <task 4: reformulate entire review text>}. Respond with {\"spans\": \"None\"} if you think your I will not find anything difficult to understand.\nText: In Rajpur, life revolves around traditional practices: villagers gather under an ancient banyan tree, markets bustle with local produce, and handmade saris and pickles are cherished. Festivals feature drumbeats and the charkha for spinning yarn. In Bangalore, the scene shifts to modernity with tech startups and glass skyscrapers. Caf\u00e9s offer fusion cuisine, street art brightens the cityscape, and the buzz of smartphones underscores the fast-paced urban life. Both places vividly showcase their cultures through distinct culture-specific items, reflecting their unique environments.\n",
+  "updated_prompt_new_text_response": {
+      "spans": [
+          {
+              "CSI": "charkha",
+              "familiarity": "Somewhat familiar",
+              "reason": "Charkha, a spinning wheel, might be known to some due to its historical significance in India, but not commonly recognized by all."
+          },
+          {
+              "CSI": "tech startups",
+              "familiarity": "Unfamiliar",
+              "reason": "Tech startups, companies focused on technology, may not be a familiar concept in rural India."
+          },
+          {
+              "CSI": "glass skyscrapers",
+              "familiarity": "Unfamiliar",
+              "reason": "Glass skyscrapers, tall modern buildings made of glass, are not common in rural settings."
+          },
+          {
+              "CSI": "fusion cuisine",
+              "familiarity": "Unfamiliar",
+              "reason": "Fusion cuisine, which blends different culinary traditions, might be unfamiliar in rural India."
+          },
+          {
+              "CSI": "street art",
+              "familiarity": "Unfamiliar",
+              "reason": "Street art, visual art created in public locations, is not prevalent in rural India."
+          },
+          {
+              "CSI": "smartphones",
+              "familiarity": "Somewhat familiar",
+              "reason": "Smartphones are becoming more common, but their pervasive use in urban life might not be fully relatable."
+          }
+      ],
+      "reformulation": "In Rajpur, daily life is deeply rooted in age-old customs: villagers meet under an old banyan tree, local markets are lively with farm produce, and handcrafted saris and pickles are valued. Festivals include drumming and using the charkha to make thread. In Bangalore, things are more contemporary with technology companies and tall modern buildings. Coffee shops serve a mix of different food styles, colorful paintings decorate the city, and the constant use of mobile phones marks the quick city lifestyle. Both places vividly display their traditions through unique items, showing their different settings."
+  },
+  "original_prompt_new_text": "\n# AI Rules\n    - Output response JSON format compatible with Python.\n    - JSON keys and values in double-quotes\n    - Do not output any extraneous text \nYou are a cultural mediator who understands all cultures across the world. As a mediator, your job is to identify and translate culturally exotic concepts from texts from an unknown source culture to my culture. Your job is also to adapt with my background during the interaction. I am from a teenager, an occasional reader, proficient in English who grew up in the urban India, which defines my culture. I came across a piece of text. Given my cultural background and reading experience, perform the following tasks: \nTask 1: Identify all culture-specific items (CSIs) from the review text that I might find hard to understand due to my cultural background. CSIs are textual spans denoting concepts and items uncommon and not prevalent in my culture, making them difficult to understand.\nTask 2: For each CSI, identify its familiarity from one of the following four levels: 1. Familiar: Most people from my culture know and relate to the concept as intended. 2. Somewhat familiar: Only some people from my culture know and relate to the concept as intended. 3. Unfamiliar: Most people from my culture do not know or relate to the concept.\nTask 3: Within 50 words, detail your reason for highlighting the span as CSI in Task 1 by correlating it with my background. \nTask 4: Reformulate the entire text to make it more understandable to me. Keep the length similar to the original review text. \nFormat your response as a valid Python dictionary formatted as: {\"spans\": [List of Python dictionaries where each dictionary item is formatted as: {\"CSI\": <task 1: copy the CSI span from text>, \"familiarity\": <task 2: familiarity level name>, \"reason\": <task 3: reason within 50 words>}], \"reformulation\": <task 4: reformulate entire review text>}. Respond with {\"spans\": \"None\"} if you think your I will not find anything difficult to understand.\nText: In Rajpur, life revolves around traditional practices: villagers gather under an ancient banyan tree, markets bustle with local produce, and handmade saris and pickles are cherished. Festivals feature drumbeats and the charkha for spinning yarn. In Bangalore, the scene shifts to modernity with tech startups and glass skyscrapers. Caf\u00e9s offer fusion cuisine, street art brightens the cityscape, and the buzz of smartphones underscores the fast-paced urban life. Both places vividly showcase their cultures through distinct culture-specific items, reflecting their unique environments.\n",
+  "original_prompt_new_text_response": {
+      "spans": [
+          {
+              "CSI": "Rajpur",
+              "familiarity": "Unfamiliar",
+              "reason": "Rajpur is not a widely recognized location in urban India, making it unfamiliar to most."
+          },
+          {
+              "CSI": "banyan tree",
+              "familiarity": "Somewhat familiar",
+              "reason": "While banyan trees are known in India, urban teenagers might not relate to their cultural significance."
+          },
+          {
+              "CSI": "handmade saris",
+              "familiarity": "Somewhat familiar",
+              "reason": "Saris are common in India, but 'handmade' aspect might not be as relatable to urban youth."
+          },
+          {
+              "CSI": "charkha",
+              "familiarity": "Unfamiliar",
+              "reason": "Charkha is historically significant but not commonly known among urban Indian teenagers."
+          },
+          {
+              "CSI": "fusion cuisine",
+              "familiarity": "Somewhat familiar",
+              "reason": "Fusion cuisine is somewhat known but specifics might be unclear to teenagers."
+          },
+          {
+              "CSI": "street art",
+              "familiarity": "Somewhat familiar",
+              "reason": "While prevalent in urban settings, the cultural context of street art might vary."
+          }
+      ],
+      "reformulation": "In a village named Rajpur, people follow old traditions: they meet under a big old tree, local markets are full of farm products, and people value handmade clothes and pickles. During festivals, there are drum sounds and a device used for making thread. In Bangalore, things are modern with new tech companies and tall glass buildings. Coffee shops serve mixed-style food, there's creative art in public spaces, and everyone's using smartphones, showing the city's fast life. Both places show their unique lifestyles and items that are special to them."
+  }
+}
